@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Kiersten's Portfolio</title>
+    <!-- Placeholder main.css/favicon.ico files for ease later -->
+    <link href="main.css" rel="stylesheet" /> 
+    <link href="favicon.ico" rel="icon" />
+</head>
+
+<body>
+    <header>
+        <h1 id="mainHeading" style="color:rgb(85, 129, 122);">Kiersten Bellotti - Software Engineer</h1>  
+        <nav>
+            <!--Needs to be wrapped in button for that pretty button dropdown toggle but for now it is okay-->
+            <ul id="mainNavBar">
+                <li><a href=projects/>Projects</a></li>
+                <li><a href=resume/>Resume</a></li>
+                <li><a href=experiments/>Experiments</a></li>
+                <li><a href=contact/>Contact Me</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul id="externalLinks">
+                <li><a href=https://github.com/Kbellott>GitHub</a></li>
+                <li><a href=https://www.linkedin.com/in/kiersten-bellotti-12b125225/>Linkedin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="fakeBrowserBar">
+            <!-- Placeholder bar to be done in CSS, as this is a purely visual element -->
+        </div>
+        <div id="pageContent">
+            <picture> 
+                <source srcset="content/ProfilePic.webp" media="(min-width:500px)" type="image/webp" />
+                <source srcset="content/ProfilePicSmall.webp" type="image/webp" />
+                <source srcset="content/ProfilePic.webp" media="(min-width:500px)" />
+                <img src="content/ProfilePicSmall.jpg" alt="Picture of me: A blonde woman smiling in the center of the picture with plants behind her" height="250">
+            </picture>
+            <h2 id="helloMessage">Hi there, I'm Kiersten Bellotti</h2>
+            <hr />
+            <p class="description">I'm a budding software engineer based in California, USA. 
+                Currently, I'm busy finishing my Bachlors of Science in Computer Engineering at University of California, San Diego, but if you 
+                check back in a few months I'll be on my way working with, and developing drones and other defense technologies at 
+                <a href="https://www.ga-asi.com/" id="generalAtomicsLink">General Atomics</a>.
+            </p>
+            <p class="description">I have a passion for web design and most things digital. In my free time I like to game and draw. I'm a huge nerd for fantasy 
+                and I love cats/gardening!
+            </p>
+            <aside><p>I'd love to connect with you for business inquaries or over a mutual love of any of those things </p></aside>
+        </div>
+    </main>
+
+    <footer>
+        <hr />
+        <p id="footerMessage">All content is a product of my own making or protected under fair use.</p>
+        <address>
+            Kiersten Bellotti <br />
+            San Diego, California<br />
+            kiersten.bellotti@gmail.com
+        </address>
+    </footer>
+
+</body>
+</html>

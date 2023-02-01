@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Portfolio-Contact Me</title>
+    <!-- Placeholder main.css/favicon.ico files for ease later -->
+    <link href="../main.css" rel="stylesheet" /> 
+    <link href="../favicon.ico" rel="icon" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!--Needs to be wrapped in button for that pretty button dropdown toggle but for now it is okay-->
+            <ul id="mainNavBar">
+                <li><a href=../projects/>Projects</a></li>
+                <li><a href=../resume/>Resume</a></li>
+                <li><a href=../experiments/>Experiments</a></li>
+                <li><a href=../contact/>Contact Me</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul id="externalLinks">
+                <li><a href=https://github.com/Kbellott>GitHub</a></li>
+                <li><a href=https://www.linkedin.com/in/kiersten-bellotti-12b125225/>Linkedin</a></li>
+            </ul>
+        </nav>
+        <nav id="homepage"><a href=../>Home page</a>   </nav>
+    </header>
+
+    <main>
+        <img src="https://f2.toyhou.se/file/f2-toyhou-se/images/52510232_7FonB0Ak0GCSCMj.gif?1658698722" alt="A happy cat character blinking" height="100">
+        <h1 id="contact">Contact</h1>
+        <p>Send me a message to chat or email me at <strong> kiersten.bellotti@gmail.com</strong></p>
+        <form action="javascript:submit()" method="POST">
+            <fieldset>
+                <legend>Your Info:</legend>
+                <label for="prefix">Prefix:
+                    <input list="prefixType" name="prefix" id="prefix">
+                    <datalist id="prefixType">
+                        <option value="Mr.">
+                        <option value="Ms.">
+                        <option value="Mrs.">
+                    </datalist>
+                </label>
+                <label for="name">Name:
+                    <input type="text" name="name" id="name" required>
+                </label>
+                <label for="contactInfo">Contact Info:
+                    <input type="email" name="contactInfo" id="contactInfo" required>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Message info</legend>
+                <label for="messages">Choose a message type:
+                    <select name="messages" id="messages">
+                        <option value="">--Please choose an option--</option>
+                        <optgroup label="Work Related">
+                            <option value="freelanceWork">Freelance Work</option>
+                            <option value="jobOffer">Job Offer</option>
+                            <option value="inquary">Question or Inquaries</option>
+                        </optgroup>
+                        <optgroup label="For Fun">
+                            <option value="petRequest">Request to see cat pics</option>
+                        </optgroup>
+                    </select>
+                </label>
+                <label for="message">Enter your message:
+                    <textarea name="message" id="message" cols="35" rows="10"></textarea>
+                </label>
+            </fieldset>
+            <button type="submit">Send</button>
+            <button type="reset">Clear Form</button>
+        </form>
+
+        <script>
+            let submit = () => {
+                let values = "Your message: \n";
+                values += document.getElementsByName("prefix")[0].value + " ";
+                values += document.getElementsByName("name")[0].value + " at ";
+                values += document.getElementsByName("contactInfo")[0].value + "\n";
+                values += "Message: \n" + document.getElementsByName("message")[0].value + "\n";
+                alert(values);
+            };
+        </script>
+
+        <details>
+            <summary>A Note from Me to You</summary>
+            <dl>
+                <dt>Thank you for visiting my site!</dt>
+                <dd>-I should get back to you soon and I look forward to many future ventures and adventures together.</dd>
+            </dl>
+        </details>
+    </main>
+
+    <footer>
+        <hr />
+        <p id="footerMessage">All content is a product of my own making or protected under fair use.</p>
+        <address>
+            Kiersten Bellotti <br />
+            San Diego, California<br />
+            kiersten.bellotti@gmail.com
+        </address>
+    </footer>
+
+</body>
+</html>
