@@ -5,32 +5,48 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Portfolio-Resume</title>
     <!-- Placeholder main.css/favicon.ico files for ease later -->
-    <link href="../main.css" rel="stylesheet" /> 
-    <link href="../favicon.ico" rel="icon" />
+    <link rel="stylesheet" media="screen and (min-width: 800px)" href="../content/otherBig.css"/>
+    <link rel="stylesheet" media="screen and (min-width: 641px) and (max-width: 799px)" href="../content/otherMedium.css"/>
+    <link rel="stylesheet" media="screen and (max-width: 640px)" href="../content/otherSmall.css"/>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../favicon.ico"/>
 </head>
 
 <body>
     <header>
-        <nav>
-            <!--Needs to be wrapped in button for that pretty button dropdown toggle but for now it is okay-->
-            <ul id="mainNavBar">
-                <li><a href=../projects/>Projects</a></li>
-                <li><a href=../resume/>Resume</a></li>
-                <li><a href=../experiments/>Experiments</a></li>
-                <li><a href=../contact/>Contact Me</a></li>
+        <div id="rightOfBar">
+            <h1 id="mainHeading">Kiersten Bellotti - Software Engineer</h1>  
+            <nav id="mainNavBar">
+                <ul>
+                    <li class="roundedBoarder"><a href=../projects/>Projects</a></li>
+                    <li class="roundedBoarder"><a href=../resume/>Resume</a></li>
+                    <li class="roundedBoarder"><a href=../contact/>Contact Me</a></li>
+                    <li class="roundedBoarder"><a href=../>Home page</a></li>
+                </ul>   
+            </nav>
+        </div>
+        <nav id="externalLinks">
+            <ul>
+                <li class="roundedBoarder"><a href=https://github.com/Kbellott/><i class="fa fa-github" style="font-size: 2rem;"></i><br/>Github</a></li>
+                <li class="roundedBoarder"><a href=https://www.linkedin.com/in/kiersten-bellotti-12b125225/><i class="fa fa-linkedin" style="font-size: 2rem;"></i><br/>LinkedIn</a></li>
             </ul>
         </nav>
-        <nav>
-            <ul id="externalLinks">
-                <li><a href=https://github.com/Kbellott>GitHub</a></li>
-                <li><a href=https://www.linkedin.com/in/kiersten-bellotti-12b125225/>Linkedin</a></li>
+        <nav id="smallNavBar">
+            <div id="icon"> <i class="fa fa-bars" onclick="toggle()"></i></div>
+            <ul id="smallNav">
+                <li class="roundedBoarder"><a href=../projects/>Projects</a></li>
+                <li class="roundedBoarder"><a href=../resume/>Resume</a></li>
+                <li class="roundedBoarder"><a href=../contact/>Contact Me</a></li>
+                <li class="roundedBoarder"><a href=../>Home</a></li>
+                <li class="roundedBoarder"><a href=https://github.com/Kbellott/><i class="fa fa-github" style="font-size: 2rem;"></i><br/>Github</a></li>
+                <li class="roundedBoarder"><a href=https://www.linkedin.com/in/kiersten-bellotti-12b125225/><i class="fa fa-linkedin" style="font-size: 2rem;"></i><br/>LinkedIn</a></li>
             </ul>
         </nav>
-        <nav id="homepage"><a href=../>Home page</a>   </nav>
     </header>
 
     <main>
         <h1>Resume</h1>
+        <hr/>
         <section id="education">
             <h2>Education</h2>
             <p id="universityName">University of California, San Diego </p>
@@ -38,11 +54,13 @@
             <p><b>Expected graduation:</b> Jun 2023 </p>
             <p>GPA: 3.446</p>
         </section>
-        <br />
+        <br/>
+        <hr/>
+        <br/>
 
-        <section id="codingExperience">
+        <section id="codingExperience" class="flexContainer">
             <h2>Code Experience</h2>
-            <Table>
+            <table class="centered">
                 <caption>Coding Knowledge</caption>
                 <colgroup>
                     <col class="language">
@@ -56,38 +74,40 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Java</td>
-                        <td>7/10</td>
+                        <td class="language">Java</td>
+                        <td class="rating">7/10</td>
                     </tr>
                     <tr>
-                        <td>C</td>
-                        <td>7/10</td>
+                        <td class="language">C</td>
+                        <td class="rating">7/10</td>
                     </tr>
                     <tr>
-                        <td>C++</td>
-                        <td>9/10</td>
+                        <td class="language">C++</td>
+                        <td class="rating">9/10</td>
                     </tr>
                     <tr>
-                        <td>Python</td>
-                        <td>4/10</td>
+                        <td class="language">Python</td>
+                        <td class="rating">4/10</td>
                     </tr>
                     <tr>
-                        <td>Golang</td>
-                        <td>5/10</td>
+                        <td class="language">Golang</td>
+                        <td class="rating">5/10</td>
                     </tr>
                     <tr>
-                        <td>html/CSS</td>
-                        <td>2/10</td>
+                        <td class="language">html/CSS</td>
+                        <td class="rating">2/10</td>
                     </tr>
                     <tr>
-                        <td>SystemVerilog</td>
-                        <td>9/10</td>
+                        <td class="language">SystemVerilog</td>
+                        <td class="rating">9/10</td>
                     </tr>
                 </tbody>
             </Table>
             <p><b>Goals:</b> Solidify mastery of C++, continue to become more familiar with web based languages, expand my familiarity with new and different languages</p>
         </section>
-        <br />
+        <br/>
+        <hr/>
+        <br/>
 
         <section id="technicalSkills">
             <h2>Technical Skill</h2>
@@ -102,27 +122,31 @@
                 <li><p>Hardware Prototyping through use of breadboards, soldering, Solidworks, 3-D printing and Laser-cutting</p></li>
             </ul>
         </section>
-        <br />
+        <br/>
+        <hr/>
+        <br/>
 
         <section class="employment">
             <h2>Employment</h2>
             <h3>General Atomics</h3>
                 <p class="jobTitle">Software Engineer</p>
                 <p class="durration">Planned start date: August 2023</p>
-                <p class="description">Working on Gray Eagle Drone Embeded systems and flight control</p>
+                <p class="description">Working on Gray Eagle Drone embedded systems and flight control</p>
             <br />
 
             <h3>Connected Camps</h3>
+            <div>
                 <p class="jobTitle">Lead Counselor/Developer</p>
                 <p class="durration">April 2021-January 2022</p>
                 <p class="description">Worked teaching groups of 6-8 students ranging from 8-15 years old STEM topics such as fundamentals 
-                    of coding, error finding and bug fixing, game design and project workflow/design for videogame 
+                    of coding, error finding and bug fixing, game design and project workflow/design for videogames. 
                     add-ons
                 </p>
                 <p class="description">Worked alongside a team for program development and streamlining of a modding course designed 
                     to introduce students to game add-on development/workflow and beginner programing topics 
                     such as Boolean logic, conditionals, loops and variables.
                 </p>
+            </div>
                 <br />
             
             <h3>Goodies Market/Sixth Market - UCSD HDH</h3>
@@ -139,6 +163,10 @@
                 <br />
         </section>
 
+        <br/>
+        <hr/>
+        <br/>
+
         <section id="other">
             <h2>Other Mentions</h2>
             <p><b>Awards & Honors:</b></p>
@@ -149,16 +177,29 @@
         <br />
 
     </main>
+    
+    <cite><a href="https://unsplash.com/photos/hckbnUpcm6E"><i class="fa fa-code" title="Background Image"></i></a></cite>
 
     <footer>
         <hr />
-        <p id="footerMessage">All content is a product of my own making or protected under fair use.</p>
+        <p id="footerMessage"><i class="fa fa-copyright"></i> 2023 | Kiersten Bellotti | Contact:</p>
         <address>
             Kiersten Bellotti <br />
             San Diego, California<br />
             kiersten.bellotti@gmail.com
         </address>
     </footer>
+
+    <script>
+        function toggle(){
+            var x = document.getElementById("smallNav");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 
 </body>
 </html>
