@@ -183,7 +183,7 @@ h1,h2,h3{
     90%{color:var(--color-yellow);}
 }
 
-#helloMessage2{
+.helloMessage2{
     align-self: flex-end;
     font-size: min(13vw, 3rem);
     Font-family: Helvetica Neue, Helvetica, Arial, sans-serif;

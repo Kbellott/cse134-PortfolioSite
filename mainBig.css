@@ -181,7 +181,7 @@ h1,h2,h3{
 
 
 
-#helloMessage2{
+.helloMessage2{
     align-self: flex-end;
     font-size: 3rem;
     Font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
